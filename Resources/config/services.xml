@@ -21,6 +21,7 @@
         <service id="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" class="CMEN\GoogleChartsBundle\Output\Javascript\ChartOutput" public="false">
             <argument>%cmen_google_charts.version%</argument>
             <argument>%cmen_google_charts.language%</argument>
+            <argument>%cmen_google_charts.mapsApiKey%</argument>
             <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\OptionsOutput"/>
             <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\DataOutput"/>
             <argument type="service" id="CMEN\GoogleChartsBundle\Output\Javascript\EventsOutput"/>

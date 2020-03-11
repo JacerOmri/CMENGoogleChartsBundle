@@ -31,11 +31,12 @@ class ChartOutput extends AbstractChartOutput
     public function __construct(
         $version,
         $language,
+        $mapsApiKey,
         OptionsOutputInterface $optionsOutput,
         DataOutputInterface $dataOutput,
         EventsOutputInterface $eventsOutput
     ) {
-        parent::__construct($version, $language);
+        parent::__construct($version, $language, $mapsApiKey);
 
         $this->optionsOutput = $optionsOutput;
         $this->dataOutput = $dataOutput;
@@ -163,8 +164,9 @@ class ChartOutput extends AbstractChartOutput
         });
 
         ($this->language) ? $language = ", language: '".$this->language."'" : $language = '';
+        ($this->mapsApiKey) ? $mapsApiKey = ", mapsApiKey: '".$this->mapsApiKey."'" : $mapsApiKey = '';
 
-        $load = "'".$this->version."', {packages:[".implode(',', $packages).']'.$language.'}';
+        $load = "'".$this->version."', {packages:[".implode(',', $packages).']'.$language.$mapsApiKey.'}';
 
         return "google.charts.load($load);";
     }

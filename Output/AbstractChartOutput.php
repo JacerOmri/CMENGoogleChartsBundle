@@ -28,10 +28,11 @@ abstract class AbstractChartOutput implements ChartOutputInterface
      * @param string $version
      * @param string $language
      */
-    public function __construct($version, $language)
+    public function __construct($version, $language, $mapsApiKey)
     {
         $this->version = $version;
         $this->language = $language;
+        $this->mapsApiKey = $mapsApiKey;
     }
 
     /**

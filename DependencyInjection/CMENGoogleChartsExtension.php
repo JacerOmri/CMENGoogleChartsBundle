@@ -21,6 +21,7 @@ class CMENGoogleChartsExtension extends Extension
 
         $container->setParameter('cmen_google_charts.version', $config['version']);
         $container->setParameter('cmen_google_charts.language', $config['language']);
+        $container->setParameter('cmen_google_charts.mapsApiKey', $config['mapsApiKey']);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');

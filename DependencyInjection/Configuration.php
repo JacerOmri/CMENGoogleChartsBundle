@@ -25,6 +25,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('version')->defaultValue('current')->end()
                 ->scalarNode('language')->defaultValue('')->end()
+                ->scalarNode('mapsApiKey')->defaultValue('')->end()
             ->end()
         ;
 

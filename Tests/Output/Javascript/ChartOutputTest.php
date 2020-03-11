@@ -27,7 +27,7 @@ class ChartOutputTest extends \PHPUnit_Framework_TestCase
         $eventsOutput = $this->createMock(EventsOutputInterface::class);
 
         /* @noinspection PhpParamsInspection */
-        $this->chartOutput = new ChartOutput('current', 'en', $optionsOutput, $dataOutput, $eventsOutput);
+        $this->chartOutput = new ChartOutput('current', 'en', '', $optionsOutput, $dataOutput, $eventsOutput);
     }
 
     /**

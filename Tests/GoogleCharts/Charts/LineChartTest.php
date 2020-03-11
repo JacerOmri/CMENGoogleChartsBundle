@@ -30,7 +30,7 @@ class LineChartTest extends \PHPUnit_Framework_TestCase
         $dataOutput = new DataOutput($dateOutput);
         $eventsOutput = new EventsOutput();
 
-        $this->chartOutput = new ChartOutput('current', 'en', $optionsOutput, $dataOutput, $eventsOutput);
+        $this->chartOutput = new ChartOutput('current', 'en', '', $optionsOutput, $dataOutput, $eventsOutput);
     }
 
     public function testJavascriptOutput()
